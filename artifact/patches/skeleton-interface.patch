@@ -1,0 +1,51 @@
+diff --git a/simsat/simsat.ml b/simsat/simsat.ml
+index 0ac22a4..a7c1f3c 100644
+--- a/simsat/simsat.ml
++++ b/simsat/simsat.ml
+@@ -212,6 +212,38 @@ let strategy filename =
+   | `Unsat strategy -> print_strategy "unsat" strategy
+   | `Unknown -> Format.printf "(unknown)@\n"
+ 
++(* Artifact interface: winning skeleton without interpolation extraction. *)
++let skeleton filename =
++  let phi = parse_smtlib2_shared (file_contents filename)
++            |> Syntax.eliminate_ite ctx in
++  let (prefix, matrix) = Quantifier.normalize ctx phi in
++  let pp_symbol formatter sym =
++    Format.fprintf formatter "%s %a" (SmtlibOut.symbol_name ctx sym)
++      SmtlibOut.pp_typ (match Syntax.typ_symbol ctx sym with
++          | `TyFun (_, _) -> invalid_arg "skeleton: function symbol"
++          | (`TyInt | `TyReal | `TyBool) as typ -> typ) in
++  let rec pp_node formatter node =
++    match Quantifier.destruct_skeleton ctx node with
++    | `Empty -> Format.fprintf formatter "(leaf)"
++    | `Forall (original, copy, child) ->
++      Format.fprintf formatter "(forall (%a) (%a) %a)"
++        pp_symbol original pp_symbol copy pp_node child
++    | `Exists (variable, moves) ->
++      Format.fprintf formatter "(exists (%a)" pp_symbol variable;
++      List.iter (fun (term, child) ->
++        Format.fprintf formatter "@\n (move %a %a)"
++          (SmtlibOut.pp ctx) term pp_node child) moves;
++      Format.fprintf formatter ")" in
++  match Quantifier.winning_skeleton ctx prefix matrix with
++  | `Sat tree ->
++    Format.printf "(sat@\n (prefix";
++    List.iter (fun (q,v) -> Format.printf "@\n (%s %a)"
++      (match q with `Forall -> "forall" | `Exists -> "exists") pp_symbol v) prefix;
++    Format.printf ")@\n (matrix %a)@\n %a)@\n"
++      (SmtlibOut.pp_formula ctx) matrix pp_node tree
++  | `Unsat _ -> Format.printf "(unsat)@\n"
++  | `Unknown -> Format.printf "(unknown)@\n"
++
+ let load_reachability_game filename =
+   let open Lexing in
+   let lexbuf = Lexing.from_channel (open_in filename) in
+@@ -300,6 +332,7 @@ let spec_list = [
+   ("-synth", Arg.String synthesize_strategy, " Synthesizing a winning strategy");
+   ("-validate", Arg.Set validate, " Validate winning strategy");
+ 
++  ("-skeleton", Arg.String skeleton, " Compute a winning skeleton without strategy extraction");
+   ("-strategy", Arg.String strategy,
+    " Synthesize a winning strategy for a satisfiability game, printing it as \
+     an s-expression over SMT-LIB2 formulas");

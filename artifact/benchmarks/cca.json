@@ -1,0 +1,180 @@
+{
+  "family": "CCA",
+  "table_i_mapping_confirmed": false,
+  "paper": {
+    "instances": 10,
+    "sat": 7,
+    "unsat": 3,
+    "solved": 9,
+    "mean_s": 32.3,
+    "median_s": 3.8,
+    "max_s": 218.4
+  },
+  "instances": [
+    {
+      "name": "RTT-no_buffer-converge",
+      "module": "examples.cca.RTT-no_buffer-converge",
+      "class": "GuessNumberGame",
+      "kwargs": {},
+      "expected": "realizable",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "RTT-no_buffer-bad_converge",
+      "module": "examples.cca.RTT-no_buffer-bad_converge",
+      "class": "GuessNumberGame",
+      "kwargs": {
+        "is_good": false
+      },
+      "expected": "unrealizable",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "RTT-finite_buffer-converge",
+      "module": "examples.cca.RTT-finite_buffer-converge",
+      "class": "CCAWaitGame",
+      "kwargs": {},
+      "expected": "realizable",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "RTT-finite_buffer-bad_converge",
+      "module": "examples.cca.RTT-finite_buffer-bad_converge",
+      "class": "CCAWaitGame",
+      "kwargs": {
+        "is_good": false
+      },
+      "expected": "unrealizable",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "RTT-no_buffer-jitter-converge",
+      "module": "examples.cca.RTT-no_buffer-jitter-converge",
+      "class": "CCAWithJitterGame",
+      "kwargs": {},
+      "expected": "realizable",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ],
+      "automatic_templates": true,
+      "automatic_template_options": {
+        "mined_only": true,
+        "max_depth": null,
+        "candidates_per_depth": 3,
+        "fixed_point_timeout": 30
+      }
+    },
+    {
+      "name": "RTT-no_buffer-jitter-bad_converge",
+      "module": "examples.cca.RTT-no_buffer-jitter-bad_converge",
+      "class": "CCAWithJitterGame",
+      "kwargs": {
+        "is_good": false
+      },
+      "expected": "unrealizable",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "timestep-finite_buffer-no_loss",
+      "module": "examples.cca.timestep-finite_buffer-no_loss",
+      "class": "CCARealGame",
+      "kwargs": {
+        "not_easy": false
+      },
+      "expected": "realizable",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "timestep-finite_buffer-converge",
+      "module": "examples.cca.timestep-finite_buffer-converge",
+      "class": "CCARealGame",
+      "kwargs": {},
+      "expected": "realizable",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ],
+      "automatic_templates": true,
+      "automatic_template_options": {
+        "cross_depth_bounds": true,
+        "max_depth": 3,
+        "mining_timeout": 180,
+        "candidates_per_depth": 4
+      }
+    },
+    {
+      "name": "timestep-finite_buffer-jitter-no_loss",
+      "module": "examples.cca.timestep-finite_buffer-jitter-no_loss",
+      "class": "CCARealJitterGame",
+      "kwargs": {
+        "not_easy": false
+      },
+      "expected": "realizable",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ],
+      "automatic_templates": true
+    },
+    {
+      "name": "timestep-finite_buffer-jitter-converge",
+      "module": "examples.cca.timestep-finite_buffer-jitter-converge",
+      "class": "CCARealJitterGame",
+      "kwargs": {},
+      "expected": "realizable",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    }
+  ]
+}

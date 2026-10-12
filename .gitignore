@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+artifact/.venv/
+artifact/_build/
+artifact/bin/
+artifact/inputs/
+artifact/results/
+
+/results/
+*.tar
+*.tar.gz

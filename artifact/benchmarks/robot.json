@@ -1,0 +1,185 @@
+{
+  "table_i_mapping_confirmed": false,
+  "paper": {
+    "instances": 10,
+    "sat": 8,
+    "unsat": 2,
+    "mean_s": 43.6,
+    "median_s": 26.2,
+    "max_s": 134.1
+  },
+  "instances": [
+    {
+      "name": "robot_delay_max_1",
+      "module": "examples.robot.robot_delay_max_1",
+      "class": "RobotDelayGame",
+      "args": [
+        1,
+        true,
+        5,
+        1,
+        true
+      ],
+      "expected": "unrealizable",
+      "kwargs": {
+        "continuous_vertical": true,
+        "max_distance": 1
+      }
+    },
+    {
+      "name": "robot_delay_max_2",
+      "module": "examples.robot.robot_delay_max_2",
+      "class": "RobotDelayGame",
+      "args": [
+        1,
+        true,
+        5,
+        1,
+        true
+      ],
+      "expected": "realizable",
+      "kwargs": {
+        "continuous_vertical": true,
+        "max_distance": 2
+      }
+    },
+    {
+      "name": "robot_delay_max_3",
+      "module": "examples.robot.robot_delay_max_3",
+      "class": "RobotDelayGame",
+      "args": [
+        1,
+        true,
+        5,
+        1,
+        true
+      ],
+      "expected": "realizable",
+      "kwargs": {
+        "continuous_vertical": true,
+        "max_distance": 3
+      }
+    },
+    {
+      "name": "robot_delay_max_4",
+      "module": "examples.robot.robot_delay_max_4",
+      "class": "RobotDelayGame",
+      "args": [
+        1,
+        true,
+        5,
+        1,
+        true
+      ],
+      "expected": "realizable",
+      "kwargs": {
+        "continuous_vertical": true,
+        "max_distance": 4
+      }
+    },
+    {
+      "name": "robot_delay_max_5",
+      "module": "examples.robot.robot_delay_max_5",
+      "class": "RobotDelayGame",
+      "args": [
+        1,
+        true,
+        5,
+        1,
+        true
+      ],
+      "expected": "realizable",
+      "kwargs": {
+        "continuous_vertical": true,
+        "max_distance": 5
+      }
+    },
+    {
+      "name": "robot_sensor_max_1",
+      "module": "examples.robot.robot_sensor_max_1",
+      "class": "RobotSensorGame",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        true
+      ],
+      "expected": "unrealizable",
+      "kwargs": {
+        "continuous_vertical": true,
+        "max_distance": 1
+      }
+    },
+    {
+      "name": "robot_sensor_max_2",
+      "module": "examples.robot.robot_sensor_max_2",
+      "class": "RobotSensorGame",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        true
+      ],
+      "expected": "realizable",
+      "kwargs": {
+        "continuous_vertical": true,
+        "max_distance": 2
+      }
+    },
+    {
+      "name": "robot_sensor_max_3",
+      "module": "examples.robot.robot_sensor_max_3",
+      "class": "RobotSensorGame",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        true
+      ],
+      "expected": "realizable",
+      "kwargs": {
+        "continuous_vertical": true,
+        "max_distance": 3
+      }
+    },
+    {
+      "name": "robot_sensor_max_4",
+      "module": "examples.robot.robot_sensor_max_4",
+      "class": "RobotSensorGame",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        true
+      ],
+      "expected": "realizable",
+      "kwargs": {
+        "continuous_vertical": true,
+        "max_distance": 4
+      }
+    },
+    {
+      "name": "robot_sensor_max_5",
+      "module": "examples.robot.robot_sensor_max_5",
+      "class": "RobotSensorGame",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        true
+      ],
+      "expected": "realizable",
+      "kwargs": {
+        "continuous_vertical": true,
+        "max_distance": 5
+      }
+    }
+  ],
+  "description": "Ten continuous-action robot cases: delayed and noisy sensors, each with maximum commanded distances 1,2,3,4,5.",
+  "family": "Robot"
+}

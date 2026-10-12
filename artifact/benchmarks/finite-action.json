@@ -1,0 +1,312 @@
+{
+  "family": "Finite Action",
+  "table_i_mapping_confirmed": false,
+  "paper": {
+    "instances": 15,
+    "sat": 15,
+    "unsat": 0,
+    "solved": 15
+  },
+  "instances": [
+    {
+      "name": "bakery-8-actions-matched",
+      "module": "examples.finite_action.bakery.bakery-8-actions-matched",
+      "class": "BakeryPastedFiniteGame",
+      "kwargs": {
+        "max_offset": 4
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "bakery",
+      "paper_actions": 8,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "bakery-13-actions-matched",
+      "module": "examples.finite_action.bakery.bakery-13-actions-matched",
+      "class": "BakeryPastedFiniteGame",
+      "kwargs": {
+        "max_offset": 9
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "bakery",
+      "paper_actions": 13,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "bakery-18-actions-matched",
+      "module": "examples.finite_action.bakery.bakery-18-actions-matched",
+      "class": "BakeryPastedFiniteGame",
+      "kwargs": {
+        "max_offset": 14
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "bakery",
+      "paper_actions": 18,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "bakery-23-actions-matched",
+      "module": "examples.finite_action.bakery.bakery-23-actions-matched",
+      "class": "BakeryPastedFiniteGame",
+      "kwargs": {
+        "max_offset": 19
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "bakery",
+      "paper_actions": 23,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "bakery-28-actions-matched",
+      "module": "examples.finite_action.bakery.bakery-28-actions-matched",
+      "class": "BakeryPastedFiniteGame",
+      "kwargs": {
+        "max_offset": 24
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "bakery",
+      "paper_actions": 28,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "parts-2-actions-matched",
+      "module": "examples.finite_action.parts.parts-2-actions-matched",
+      "class": "ProductionSystemScaleGame",
+      "kwargs": {
+        "scale": 1
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "parts",
+      "paper_actions": 2,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        2,
+        true,
+        100,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "parts-4-actions-matched",
+      "module": "examples.finite_action.parts.parts-4-actions-matched",
+      "class": "ProductionSystemScaleGame",
+      "kwargs": {
+        "scale": 3
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "parts",
+      "paper_actions": 4,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        2,
+        true,
+        100,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "parts-6-actions-matched",
+      "module": "examples.finite_action.parts.parts-6-actions-matched",
+      "class": "ProductionSystemScaleGame",
+      "kwargs": {
+        "scale": 5
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "parts",
+      "paper_actions": 6,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        2,
+        true,
+        100,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "parts-8-actions-matched",
+      "module": "examples.finite_action.parts.parts-8-actions-matched",
+      "class": "ProductionSystemScaleGame",
+      "kwargs": {
+        "scale": 7
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "parts",
+      "paper_actions": 8,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        2,
+        true,
+        100,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "parts-10-actions-matched",
+      "module": "examples.finite_action.parts.parts-10-actions-matched",
+      "class": "ProductionSystemScaleGame",
+      "kwargs": {
+        "scale": 9
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "parts",
+      "paper_actions": 10,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        2,
+        true,
+        100,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "robot-10-actions-matched",
+      "module": "examples.finite_action.robot.robot-10-actions-matched",
+      "class": "RobotFiniteGame",
+      "kwargs": {
+        "max_distance": 4
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "robot",
+      "paper_actions": 10,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "robot-20-actions-matched",
+      "module": "examples.finite_action.robot.robot-20-actions-matched",
+      "class": "RobotFiniteGame",
+      "kwargs": {
+        "max_distance": 9
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "robot",
+      "paper_actions": 20,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "robot-30-actions-matched",
+      "module": "examples.finite_action.robot.robot-30-actions-matched",
+      "class": "RobotFiniteGame",
+      "kwargs": {
+        "max_distance": 14
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "robot",
+      "paper_actions": 30,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "robot-40-actions-matched",
+      "module": "examples.finite_action.robot.robot-40-actions-matched",
+      "class": "RobotFiniteGame",
+      "kwargs": {
+        "max_distance": 19
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "robot",
+      "paper_actions": 40,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    },
+    {
+      "name": "robot-50-actions-matched",
+      "module": "examples.finite_action.robot.robot-50-actions-matched",
+      "class": "RobotFiniteGame",
+      "kwargs": {
+        "max_distance": 24
+      },
+      "expected": "realizable",
+      "reconstructed": true,
+      "family": "robot",
+      "paper_actions": 50,
+      "strategy_backend": "skeleton-qe",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "family": "Lander",
+  "table_i_mapping_confirmed": true,
+  "paper": {
+    "instances": 4,
+    "sat": 2,
+    "unsat": 2,
+    "solved": 4,
+    "mean_s": 61.2,
+    "median_s": 60.4,
+    "max_s": 100.4
+  },
+  "instances": [
+    {
+      "name": "MPL",
+      "module": "examples.lander.MPL",
+      "class": "MPLPaperGame",
+      "kwargs": {
+        "exponential": false,
+        "max_error": 0,
+        "initial_altitude": 40
+      },
+      "expected": "realizable",
+      "args": [
+        0,
+        true,
+        2,
+        1,
+        false
+      ],
+      "newly_constructed": true,
+      "reconstructed": false,
+      "strategy_backend": "skeleton-qe",
+      "synthesis_options": {
+        "preserve_discrete_predicates": true,
+        "prioritize_seed_differences": true,
+        "fixpoint_simplifier": "z3-context",
+        "compact_qe": true,
+        "export_winning_region": true,
+        "strict_template_checks": true
+      }
+    },
+    {
+      "name": "MPL-exp",
+      "module": "examples.lander.MPL-exp",
+      "class": "MPLPaperGame",
+      "kwargs": {
+        "exponential": true,
+        "max_error": 0,
+        "initial_altitude": 3
+      },
+      "expected": "realizable",
+      "args": [
+        0,
+        true,
+        2,
+        1,
+        false
+      ],
+      "newly_constructed": true,
+      "reconstructed": false,
+      "strategy_backend": "skeleton-qe",
+      "synthesis_options": {
+        "preserve_discrete_predicates": true,
+        "prioritize_seed_differences": true,
+        "fixpoint_simplifier": "z3-context",
+        "compact_qe": true,
+        "export_winning_region": true,
+        "strict_template_checks": true
+      }
+    },
+    {
+      "name": "MPL-unrealizable",
+      "module": "examples.lander.MPL-unrealizable",
+      "class": "MPLPaperGame",
+      "kwargs": {
+        "exponential": false,
+        "max_error": 0,
+        "initial_altitude": 39
+      },
+      "expected": "unrealizable",
+      "args": [
+        5,
+        true,
+        2,
+        1,
+        false
+      ],
+      "newly_constructed": true,
+      "reconstructed": false,
+      "strategy_backend": "skeleton-qe",
+      "synthesis_options": {
+        "preserve_discrete_predicates": true,
+        "prioritize_seed_differences": true,
+        "fixpoint_simplifier": "z3-context",
+        "compact_qe": true,
+        "export_winning_region": true,
+        "strict_template_checks": true
+      }
+    },
+    {
+      "name": "MPL-exp-unrealizable",
+      "module": "examples.lander.MPL-exp-unrealizable",
+      "class": "MPLPaperGame",
+      "kwargs": {
+        "exponential": true,
+        "max_error": 0,
+        "initial_altitude": 2
+      },
+      "expected": "unrealizable",
+      "args": [
+        5,
+        true,
+        2,
+        1,
+        false
+      ],
+      "newly_constructed": true,
+      "reconstructed": false,
+      "strategy_backend": "skeleton-qe",
+      "synthesis_options": {
+        "preserve_discrete_predicates": true,
+        "prioritize_seed_differences": true,
+        "fixpoint_simplifier": "z3-context",
+        "compact_qe": true,
+        "export_winning_region": true,
+        "strict_template_checks": true
+      }
+    }
+  ]
+}

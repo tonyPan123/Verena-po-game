@@ -1,0 +1,11 @@
+.git
+**/__pycache__
+**/*.pyc
+artifact/.venv
+artifact/_build
+artifact/bin
+artifact/inputs
+artifact/results
+*.tar
+*.tar.gz
+results

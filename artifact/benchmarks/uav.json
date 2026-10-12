@@ -1,0 +1,96 @@
+{
+  "family": "UAV",
+  "table_i_mapping_confirmed": true,
+  "paper": {
+    "instances": 6,
+    "sat": 3,
+    "unsat": 3,
+    "mean_s": 77.8,
+    "median_s": 20.2,
+    "max_s": 200.8
+  },
+  "instances": [
+    {
+      "name": "UAV-1D",
+      "module": "examples.uav.UAV-1D",
+      "class": "AltitudeGame",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ],
+      "expected": "realizable"
+    },
+    {
+      "name": "UAV-1D-bad",
+      "module": "examples.uav.UAV-1D-bad",
+      "class": "AltitudeBadGame",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ],
+      "expected": "unrealizable"
+    },
+    {
+      "name": "UAV-2D",
+      "module": "examples.uav.UAV-2D",
+      "class": "AltitudeGame2D",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ],
+      "expected": "realizable"
+    },
+    {
+      "name": "UAV-2D-bad",
+      "module": "examples.uav.UAV-2D-bad",
+      "class": "AltitudeGame2DBad",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ],
+      "expected": "unrealizable"
+    },
+    {
+      "name": "UAV-3D",
+      "module": "examples.uav.UAV-3D",
+      "class": "AltitudeGame3D",
+      "args": [
+        0,
+        true,
+        5,
+        1,
+        false
+      ],
+      "expected": "realizable"
+    },
+    {
+      "name": "UAV-3D-bad",
+      "module": "examples.uav.UAV-3D-bad",
+      "class": "AltitudeGame3DBad",
+      "args": [
+        1,
+        true,
+        5,
+        1,
+        false
+      ],
+      "expected": "unrealizable",
+      "reconstructed": false,
+      "kwargs": {
+        "wind_error_z": 26
+      }
+    }
+  ]
+}
